@@ -42,7 +42,6 @@ button {
   font-weight: bold;
 }
 
-/* NEW: Arc Layout Grid */
 .arc-grid {
   display: grid;
   grid-template-rows: repeat(4, auto);
@@ -63,8 +62,8 @@ button {
   padding: 10px;
   border-radius: 6px;
   text-align: center;
-  font-size: 14px;
-  min-height: 40px;
+  font-size: 13px;
+  min-height: 60px;
   border: 1px solid #999;
   white-space: pre-line;
   word-wrap: break-word;
