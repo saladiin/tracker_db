@@ -55,7 +55,64 @@
       "Crew threshold": 22
     }
   ],
-  "weapons": [],
+  "ship_weapons": [
+    {
+      "Ship": "Hyperion Cruiser",
+      "Weapon name": "Heavy Laser Cannon",
+      "Arc": "Boresight",
+      "AD": "4",
+      "Range": "18",
+      "Weapon Traits": "Beam, Double Damage"
+    },
+    {
+      "Ship": "Hyperion Cruiser",
+      "Weapon name": "Heavy Laser Cannon (a)",
+      "Arc": "Boresight",
+      "AD": "2",
+      "Range": "18",
+      "Weapon Traits": "Beam, Double Damage"
+    },
+    {
+      "Ship": "Hyperion Cruiser",
+      "Weapon name": "Plasma Cannon",
+      "Arc": "Forward",
+      "AD": "4",
+      "Range": "10",
+      "Weapon Traits": ""
+    },
+    {
+      "Ship": "Hyperion Cruiser",
+      "Weapon name": "Plasma Cannon",
+      "Arc": "Forward",
+      "AD": "4",
+      "Range": "8",
+      "Weapon Traits": "Armor Piercing, Twin-Linked"
+    },
+    {
+      "Ship": "Hyperion Cruiser",
+      "Weapon name": "Plasma Cannon",
+      "Arc": "Port",
+      "AD": "8",
+      "Range": "10",
+      "Weapon Traits": ""
+    },
+    {
+      "Ship": "Hyperion Cruiser",
+      "Weapon name": "Plasma Cannon",
+      "Arc": "Starboard",
+      "AD": "8",
+      "Range": "10",
+      "Weapon Traits": ""
+    },
+    {
+      "Ship": "Hyperion Cruiser",
+      "Weapon name": "Plasma Cannon",
+      "Arc": "Aft",
+      "AD": "2",
+      "Range": "10",
+      "Weapon Traits": ""
+    }
+  ],
   "ship_traits": [
     {
       "Ship Trait Name": "Anti-Fighter 2",
