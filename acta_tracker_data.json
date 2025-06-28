@@ -41,7 +41,120 @@
       "Crew threshold": 22
     }
   ],
-  "weapons": [],
+  "weapons": [
+    {
+      "Ship": "Hyperion",
+      "Weapon name": "Heavy Laser Cannon",
+      "Arc": "Boresight Forward",
+      "Range": "18",
+      "AD": "4",
+      "Weapon Traits": "Beam, Double Damage"
+    },
+    {
+      "Ship": "Hyperion",
+      "Weapon name": "Medium Pulse Cannon",
+      "Arc": "Forward",
+      "Range": "10",
+      "AD": "4",
+      "Weapon Traits": NaN
+    },
+    {
+      "Ship": "Hyperion",
+      "Weapon name": "Plasma Cannon",
+      "Arc": "Forward",
+      "Range": "8",
+      "AD": "4",
+      "Weapon Traits": "Armord Piercing, Twin-Linked"
+    },
+    {
+      "Ship": "Hyperion",
+      "Weapon name": "Medium Pulse Cannon",
+      "Arc": "Port",
+      "Range": "10",
+      "AD": "8",
+      "Weapon Traits": NaN
+    },
+    {
+      "Ship": "Hyperion",
+      "Weapon name": "Medium Pulse Cannon",
+      "Arc": "Starboard",
+      "Range": "10",
+      "AD": "8",
+      "Weapon Traits": NaN
+    },
+    {
+      "Ship": "Hyperion",
+      "Weapon name": "Medium Pulse Cannon",
+      "Arc": "Aft",
+      "Range": "10",
+      "AD": "2",
+      "Weapon Traits": NaN
+    },
+    {
+      "Ship": "Hyperion",
+      "Weapon name": "Heavy Laser Cannon",
+      "Arc": "Boresight Aft",
+      "Range": "18",
+      "AD": "2",
+      "Weapon Traits": "Beam, Double Damage"
+    },
+    {
+      "Ship": "Sharlin",
+      "Weapon name": "Weapon name",
+      "Arc": "Arc",
+      "Range": "Range",
+      "AD": "AD",
+      "Weapon Traits": "Weapon Traits"
+    },
+    {
+      "Ship": "Sharlin",
+      "Weapon name": "Neutron Laser",
+      "Arc": "Forward",
+      "Range": "30",
+      "AD": "8",
+      "Weapon Traits": "Beam, Double Damage, precise"
+    },
+    {
+      "Ship": "Sharlin",
+      "Weapon name": "Fusion Cannon",
+      "Arc": "Forward",
+      "Range": "18",
+      "AD": "8",
+      "Weapon Traits": "mini-beam"
+    },
+    {
+      "Ship": "Sharlin",
+      "Weapon name": "Fusion Cannon",
+      "Arc": "Port",
+      "Range": "18",
+      "AD": "8",
+      "Weapon Traits": "mini-beam"
+    },
+    {
+      "Ship": "Sharlin",
+      "Weapon name": "Fusion Cannon",
+      "Arc": "Starboard",
+      "Range": "18",
+      "AD": "8",
+      "Weapon Traits": "mini-beam"
+    },
+    {
+      "Ship": "Sharlin",
+      "Weapon name": "Neutron Laser",
+      "Arc": "Aft",
+      "Range": "30",
+      "AD": "6",
+      "Weapon Traits": "Beam, Double Damage, precise"
+    },
+    {
+      "Ship": "Sharlin",
+      "Weapon name": "Fusion Cannon",
+      "Arc": "Aft",
+      "Range": "18",
+      "AD": "8",
+      "Weapon Traits": "mini-beam"
+    }
+  ],
   "ship_traits": {
     "Adaptive Armour": "Halve Damage and Crew, round down.",
     "Advanced Anti-Fighter X": "As anti-fighter but +1 to roll",
@@ -83,150 +196,5 @@
     "Twin-Linked": "Missed Attack dice may be re-rolled",
     "Weak": "Minus 1 Attack Dice"
   },
-  "special_actions": [
-    {
-      "Special Action name": "Activate Jump Gate",
-      "Special Action effect": " (auto or opposed against Crew Quality 6) activate a jump gate."
-    },
-    {
-      "Special Action name": "All Hands on Deck",
-      "Special Action effect": " (auto) +1 to Damage Control roll, can do any number of repairs."
-    },
-    {
-      "Special Action name": "All Power To Engines",
-      "Special Action effect": " (auto) +50% to speed, no turns allowed. Another SA possible if in a"
-    },
-    {
-      "Special Action name": "gravity well",
-      "Special Action effect": null
-    },
-    {
-      "Special Action name": "All Stop",
-      "Special Action effect": " (auto) move between 0 and half, another SA possible if in gravity well. No turns may  be attempted."
-    },
-    {
-      "Special Action name": "All Stop and Pivot",
-      "Special Action effect": " (auto) Ship must have used the All Stop! Special Action in the previous turn. The ship may not be moved any distance and may only fire one weapons system. It may then be turned double its normal turn rate, in any direction."
-    },
-    {
-      "Special Action name": "Close Blast Doors and Activate Defense Grid",
-      "Special Action effect": " (auto) Turns reduced by 1. Only 1 weapon system may fire. Ships with only one weapons system may not fire at all. For each point of Damage or Crew, roll 1d6, 5+ damage ignored."
-    },
-    {
-      "Special Action name": "Come About",
-      "Special Action effect": " (9) one additional turn OR one turn of 45 degrees extra. Ships with Lumbering may only increase an existing turn by 45 deg. They may not gain an extra turn."
-    },
-    {
-      "Special Action name": "Concentrate All Firepower",
-      "Special Action effect": " (8) 1 target, all misses can be re-rolled once. Weapons with Beam, Energy Mine or Twin-Linked may not benefit."
-    },
-    {
-      "Special Action name": "Give Me Ramming Speed",
-      "Special Action effect": " (9) Crippled ship may add 50% to speed, only one turn, to ram another ship. Opposed crew quality checks. If you lose, you missed. If you win, both take damage, \u00bd opponent\u2019s starting damage in points, with Super AP and Triple Damage. Dodge, Interceptors and Stealth do not count. All other traits do."
-    },
-    {
-      "Special Action name": "Initiate Jump Point",
-      "Special Action effect": " (auto) speed is halved, cannot fire weapons. Cannot enter jump point in same turn it is opened."
-    },
-    {
-      "Special Action name": "Intensify Defensive Fire",
-      "Special Action effect": " (8) Half AD on all weapons in all fire arcs. Double the number of dice used for Interceptors and Anti-Fighter traits"
-    },
-    {
-      "Special Action name": "Launch Breaching Pods and Shuttles",
-      "Special Action effect": " (automatic) you may use any and all Troops on board to launch a boarding action on a nearby enemy ship. Enemy must be stationary, and within 4\u201d of your own. A boarding action may be launched in the Attack Phase."
-    },
-    {
-      "Special Action name": "Run Silent",
-      "Special Action effect": " (8) if crew quality check passed, ship gains Stealth +3 for this turn. May not fire, speed is halved, may not turn. If failed, restrictions remain, but no Stealth bonus."
-    },
-    {
-      "Special Action name": "Scramble! Scramble",
-      "Special Action effect": " (7) two flights of auxiliary craft may be launched. If the ship has the Carrier trait, it may launch one more flight than normal. "
-    },
-    {
-      "Special Action name": "Stand Down and Prepare to be Boarded",
-      "Special Action effect": "(opposed) Both players make an opposed Crew Quality check. If you beat your opponent, his crew will surrender. His ship stays motionless on the table. If it is attacked, control passes to your opponent. If your ships are more than 10\u201d away in the initiative phase of any turn, you opponent may regain control on a Crew"
-    },
-    {
-      "Special Action name": null,
-      "Special Action effect": null
-    },
-    {
-      "Special Action name": null,
-      "Special Action effect": null
-    },
-    {
-      "Special Action name": null,
-      "Special Action effect": null
-    },
-    {
-      "Special Action name": null,
-      "Special Action effect": null
-    },
-    {
-      "Special Action name": null,
-      "Special Action effect": null
-    },
-    {
-      "Special Action name": null,
-      "Special Action effect": null
-    },
-    {
-      "Special Action name": null,
-      "Special Action effect": null
-    },
-    {
-      "Special Action name": null,
-      "Special Action effect": null
-    },
-    {
-      "Special Action name": null,
-      "Special Action effect": null
-    },
-    {
-      "Special Action name": null,
-      "Special Action effect": null
-    },
-    {
-      "Special Action name": null,
-      "Special Action effect": null
-    },
-    {
-      "Special Action name": null,
-      "Special Action effect": null
-    },
-    {
-      "Special Action name": null,
-      "Special Action effect": null
-    },
-    {
-      "Special Action name": null,
-      "Special Action effect": null
-    },
-    {
-      "Special Action name": null,
-      "Special Action effect": null
-    },
-    {
-      "Special Action name": null,
-      "Special Action effect": null
-    },
-    {
-      "Special Action name": null,
-      "Special Action effect": null
-    },
-    {
-      "Special Action name": null,
-      "Special Action effect": null
-    },
-    {
-      "Special Action name": null,
-      "Special Action effect": null
-    },
-    {
-      "Special Action name": null,
-      "Special Action effect": "Quality check of 10+."
-    }
-  ]
+  "special_actions": []
 }
