@@ -80,7 +80,8 @@ function renderShip() {
   }).join('');
 
   const weaponsSection = document.getElementById('weaponsSection');
-  weaponsSection.innerHTML = '<h3>Weapons</h3>';
+ document.getElementById('arcLayoutSection').innerHTML = arcGrid;
+
 
   const arcs = {
     "Boresight": [],
