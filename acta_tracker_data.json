@@ -1,13 +1,13 @@
 {
   "ships": [
     {
-      "Race": "Earth Alliance (Third Age)\u00a0-\u00a0Raid",
+      "Race": "Earth Alliance (Third Age) - Raid",
       "Ship Class": "Hyperion Cruiser",
       "Speed": 8,
       "Hull": 5,
       "Turns": 2,
-      "Turn Angle": "45\u00b0",
-      "Craft (qty)": "Aurora Starfury\u00a0(1)",
+      "Turn Angle": "45°",
+      "Craft (qty)": "Aurora Starfury (1)",
       "Craft (qty).1": null,
       "Ship traits": "Anti-Fighter 2",
       "Ship traits.1": "Interceptors 2",
@@ -20,56 +20,18 @@
       "Crew": 32,
       "Crew threshold": 6,
       "weapon_layout": {
-        "Boresight": [
-          "4/18\"",
-          "2/18\""
-        ],
-        "Forward": [
-          "4/10\"",
-          "4/8\""
-        ],
-        "Port": [
-          "8/10\""
-        ],
-        "Starboard": [
-          "8/10\""
-        ],
-        "Aft": [
-          "2/10\""
-        ]
+        "Boresight": ["4/18\"", "2/18\""],
+        "Forward": ["4/10\"", "4/8\""],
+        "Port": ["8/10\""],
+        "Starboard": ["8/10\""],
+        "Aft": ["2/10\""]
       },
       "weapon_tooltips": {
-        "Boresight": [
-          [
-            "Beam, Double Damage"
-          ],
-          [
-            "Beam, Double Damage"
-          ]
-        ],
-        "Forward": [
-          [
-            ""
-          ],
-          [
-            "Armor Piercing, Twin-Linked"
-          ]
-        ],
-        "Port": [
-          [
-            ""
-          ]
-        ],
-        "Starboard": [
-          [
-            ""
-          ]
-        ],
-        "Aft": [
-          [
-            ""
-          ]
-        ]
+        "Boresight": [["Beam", "Double Damage"], ["Beam", "Double Damage"]],
+        "Forward": [[""], ["Armor Piercing", "Twin-Linked"]],
+        "Port": [[""]],
+        "Starboard": [[""]],
+        "Aft": [[""]]
       }
     },
     {
@@ -78,7 +40,7 @@
       "Hull": 5,
       "Speed": 8,
       "Turns": 1,
-      "Turn Angle": "45\u00b0",
+      "Turn Angle": "45°",
       "Craft (qty)": "Nial (4)",
       "Craft (qty).1": "Flyer (1)",
       "Ship traits": "Advanced Anti-Fighter 5",
@@ -94,7 +56,57 @@
     }
   ],
   "weapons": [],
-  "ship_traits": {},
-  "weapon_traits": {},
+  "ship_traits": [
+    {
+      "Ship Trait Name": "Anti-Fighter 2",
+      "ship trait effect": "Rolls 2 extra dice against fighters."
+    },
+    {
+      "Ship Trait Name": "Interceptors 2",
+      "ship trait effect": "Rolls 2 dice to cancel incoming hits."
+    },
+    {
+      "Ship Trait Name": "Jump Engine",
+      "ship trait effect": "Allows jump point opening."
+    },
+    {
+      "Ship Trait Name": "Advanced Anti-Fighter 5",
+      "ship trait effect": "Improved defense against fighter attacks."
+    },
+    {
+      "Ship Trait Name": "Advanced Jump Engine",
+      "ship trait effect": "Faster and more reliable jump capability."
+    },
+    {
+      "Ship Trait Name": "Flight Computer",
+      "ship trait effect": "Improves maneuverability and initiative."
+    },
+    {
+      "Ship Trait Name": "Lumbering",
+      "ship trait effect": "Can only turn once per move."
+    },
+    {
+      "Ship Trait Name": "Stealth +5",
+      "ship trait effect": "Enemy must subtract 5 from scan attempts."
+    }
+  ],
+  "weapon_traits": [
+    {
+      "Weapon Trait Name": "Beam",
+      "Effect": "Ignores Interceptors; deals damage each turn if undodged."
+    },
+    {
+      "Weapon Trait Name": "Double Damage",
+      "Effect": "Deals double the damage on a successful hit."
+    },
+    {
+      "Weapon Trait Name": "Armor Piercing",
+      "Effect": "Ignores half of the target’s armor."
+    },
+    {
+      "Weapon Trait Name": "Twin-Linked",
+      "Effect": "Roll twice for each attack die and use best result."
+    }
+  ],
   "special_actions": []
 }
