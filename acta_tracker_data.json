@@ -18,7 +18,59 @@
       "Damage": 28,
       "Damage threshold": 6,
       "Crew": 32,
-      "Crew threshold": 6
+      "Crew threshold": 6,
+      "weapon_layout": {
+        "Boresight": [
+          "4/18\"",
+          "2/18\""
+        ],
+        "Forward": [
+          "4/10\"",
+          "4/8\""
+        ],
+        "Port": [
+          "8/10\""
+        ],
+        "Starboard": [
+          "8/10\""
+        ],
+        "Aft": [
+          "2/10\""
+        ]
+      },
+      "weapon_tooltips": {
+        "Boresight": [
+          [
+            "Beam, Double Damage"
+          ],
+          [
+            "Beam, Double Damage"
+          ]
+        ],
+        "Forward": [
+          [
+            ""
+          ],
+          [
+            "Armor Piercing, Twin-Linked"
+          ]
+        ],
+        "Port": [
+          [
+            ""
+          ]
+        ],
+        "Starboard": [
+          [
+            ""
+          ]
+        ],
+        "Aft": [
+          [
+            ""
+          ]
+        ]
+      }
     },
     {
       "Race": "Minbari Federation",
@@ -41,160 +93,8 @@
       "Crew threshold": 22
     }
   ],
-  "weapons": [
-    {
-      "Ship": "Hyperion",
-      "Weapon name": "Heavy Laser Cannon",
-      "Arc": "Boresight Forward",
-      "Range": "18",
-      "AD": "4",
-      "Weapon Traits": "Beam, Double Damage"
-    },
-    {
-      "Ship": "Hyperion",
-      "Weapon name": "Medium Pulse Cannon",
-      "Arc": "Forward",
-      "Range": "10",
-      "AD": "4",
-      "Weapon Traits": NaN
-    },
-    {
-      "Ship": "Hyperion",
-      "Weapon name": "Plasma Cannon",
-      "Arc": "Forward",
-      "Range": "8",
-      "AD": "4",
-      "Weapon Traits": "Armord Piercing, Twin-Linked"
-    },
-    {
-      "Ship": "Hyperion",
-      "Weapon name": "Medium Pulse Cannon",
-      "Arc": "Port",
-      "Range": "10",
-      "AD": "8",
-      "Weapon Traits": NaN
-    },
-    {
-      "Ship": "Hyperion",
-      "Weapon name": "Medium Pulse Cannon",
-      "Arc": "Starboard",
-      "Range": "10",
-      "AD": "8",
-      "Weapon Traits": NaN
-    },
-    {
-      "Ship": "Hyperion",
-      "Weapon name": "Medium Pulse Cannon",
-      "Arc": "Aft",
-      "Range": "10",
-      "AD": "2",
-      "Weapon Traits": NaN
-    },
-    {
-      "Ship": "Hyperion",
-      "Weapon name": "Heavy Laser Cannon",
-      "Arc": "Boresight Aft",
-      "Range": "18",
-      "AD": "2",
-      "Weapon Traits": "Beam, Double Damage"
-    },
-    {
-      "Ship": "Sharlin",
-      "Weapon name": "Weapon name",
-      "Arc": "Arc",
-      "Range": "Range",
-      "AD": "AD",
-      "Weapon Traits": "Weapon Traits"
-    },
-    {
-      "Ship": "Sharlin",
-      "Weapon name": "Neutron Laser",
-      "Arc": "Forward",
-      "Range": "30",
-      "AD": "8",
-      "Weapon Traits": "Beam, Double Damage, precise"
-    },
-    {
-      "Ship": "Sharlin",
-      "Weapon name": "Fusion Cannon",
-      "Arc": "Forward",
-      "Range": "18",
-      "AD": "8",
-      "Weapon Traits": "mini-beam"
-    },
-    {
-      "Ship": "Sharlin",
-      "Weapon name": "Fusion Cannon",
-      "Arc": "Port",
-      "Range": "18",
-      "AD": "8",
-      "Weapon Traits": "mini-beam"
-    },
-    {
-      "Ship": "Sharlin",
-      "Weapon name": "Fusion Cannon",
-      "Arc": "Starboard",
-      "Range": "18",
-      "AD": "8",
-      "Weapon Traits": "mini-beam"
-    },
-    {
-      "Ship": "Sharlin",
-      "Weapon name": "Neutron Laser",
-      "Arc": "Aft",
-      "Range": "30",
-      "AD": "6",
-      "Weapon Traits": "Beam, Double Damage, precise"
-    },
-    {
-      "Ship": "Sharlin",
-      "Weapon name": "Fusion Cannon",
-      "Arc": "Aft",
-      "Range": "18",
-      "AD": "8",
-      "Weapon Traits": "mini-beam"
-    }
-  ],
-  "ship_traits": {
-    "Adaptive Armour": "Halve Damage and Crew, round down.",
-    "Advanced Anti-Fighter X": "As anti-fighter but +1 to roll",
-    "Advanced Jump Engine": null,
-    "Afterburner": "All Power to Engines! doubles Speed",
-    "Agile": "Need only move \u00bc of speed beforeturning, 1\u201d between turns",
-    "Anti-Fighter X": "Has X dice to roll against fighters hulls to destroy them, 2\u201d range",
-    "Carrier X": "Can launch or recover X squadrons per turn",
-    "Command +X": "Plus X to initiative. Not cumulative, lost when crippled or skeleton crewed.",
-    "Dodge X": "1d6 per hit, if result >= X, attack missed. Lost if Adrift or not moved.",
-    "Escort": "May lend Anti-Fighter dice to ships within 8\u201d and LOS",
-    "Fleet Carrier": "Plus 1 bonus to dogfight. Repair destroyed flights within 30\u201d. See rules.",
-    "Flight Computer": "Crew Quality never less than 4, no penalties for being reduced to Skeleton Crew",
-    "Gravitiv Energy Grid  X": "Reduces damage and crew taken by X. critical hits not affected",
-    "Interceptors X": null,
-    "Jump Engine": null,
-    "Lumbering": "May not continue move after turning, one turn only; may not be lost",
-    "Self Repairing X": "Plus 1 to Damage Control. In the end phase, 1d6 rolled,  listed Damage repaired",
-    "Scout": "36\u201d range. Instead of special action my roll CQ 8+ to reduce stealth by 1 or to allow friendly ships to re-roll one weapon AD against target that turn (not beams).",
-    "Shields X/X": "Stops X hits (hits multiplied by double etc), regenerates second number.",
-    "Stealth X": "After an Attack has been declared only hits on X, if distance > 20\u201d add 1 to X, if < 8\u201d minus 1,  if target has already been hit \u20131 again"
-  },
-  "weapon_traits": {
-    "Accurate": "Ignores Dodge value",
-    "Armor Piercing": "Plus 1 to Attack Dice",
-    "Beam": "Ignores Interceptors; hits on 4+, if hit, re-rolluntil no hits is scored; may only split fire iftargets are within 4 inches",
-    "Double Damage": "Damage and Crew x2, including CriticalDamage, always cause one Damage, even ifit is a Bulkhead hit",
-    "Energy Mine": "Nominate point within range, all objects within 3 inches receive damage, which ignores Stealth,Interceptors and Dodge traits. Cannot causecrits",
-    "Gravitic Shifter": "May turn enemy ship 45 degrees, opposed Crew Quality  check",
-    "Mass Driver": "Target must be Adrift or not moved. IgnoresShields, Interceptors and GEG.",
-    "Mini Beam": "Hits on 4+, ignores interceptor",
-    "One-Shot": "May only be used once. Not used if Stealthroll failed",
-    "Orbital Bomb": "May only be fired at planetary targets (troops and emplacements)",
-    "Precise": "+1 on Attack Table",
-    "Quad Damage": "Damage and Crew damage  x 4, including criticaldamage. Causes 2 damage on Bulkhead hit.",
-    "Slow Loading": "May only fire every other turn, not fired if Stealth roll failed",
-    "Super Armor Piercing": "Plus 2 to Attack Dice",
-    "Triple Damage": "Damage and Crew damage  x 3, including criticaldamage. Causes 1 damage on Bulkhead hit.",
-    "Twin-Linked": "Missed Attack dice may be re-rolled",
-    "Weak": "Minus 1 Attack Dice"
-  },
+  "weapons": [],
+  "ship_traits": {},
+  "weapon_traits": {},
   "special_actions": []
 }
