@@ -1,6 +1,20 @@
 let data = null;
 
 fetch("https://saladiin.github.io/tracker_db/acta_tracker_data.json")
+  .then(function(res) {
+    console.log("Fetch status: " + res.status + ", success: " + res.ok);
+    return res.json();
+  })
+  .then(function(json) {
+    console.log("Loaded JSON:", json);
+    data = json;
+    initializeUI();
+  })
+  .catch(function(err) {
+    console.error("Fetch/parsing error:", err);
+  });let data = null;
+
+fetch("https://saladiin.github.io/tracker_db/acta_tracker_data.json")
   .then(res => {
     console.log("Fetch status:", res.status, res.ok);
     return res.json();
