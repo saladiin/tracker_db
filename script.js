@@ -7,7 +7,14 @@ fetch("https://saladiin.github.io/tracker_db/acta_tracker_data.json")
   })
   .then(json => {
     console.log("Loaded JSON:", json);
-    data = json;
+    // Ensure all expected properties exist
+    data = {
+      ships: json.ships || [],
+      ship_weapons: json.ship_weapons || [],
+      ship_traits: json.ship_traits || [],
+      weapon_traits: json.weapon_traits || [],
+      special_actions: json.special_actions || []
+    };
     initializeUI();
   })
   .catch(err => {
