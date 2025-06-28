@@ -1,6 +1,6 @@
 let data = null;
 
-fetch("acta_tracker_data.json")
+fetch("https://saladiin.github.io/tracker_db/acta_tracker_data.json")
   .then(res => res.json())
   .then(json => {
     data = {
@@ -80,26 +80,20 @@ function renderShip() {
 
   const weapons = data.ship_weapons.filter(w => w.Ship === selectedName);
   weapons.forEach(w => {
-    if (arcs[w.Arc]) {
-      arcs[w.Arc].push(w);
-    }
+    if (arcs[w.Arc]) arcs[w.Arc].push(w);
   });
 
   const arcGrid = `
     <div class="arc-grid">
-      <div class="arc-row">
-        <div></div>
+      <div class="arc-row"><div></div>
         <div class="arc-box" title="${tooltipFor(arcs['Boresight'])}">
           ${renderWeapons(arcs['Boresight'])}
-        </div>
-        <div></div>
+        </div><div></div>
       </div>
-      <div class="arc-row">
-        <div></div>
+      <div class="arc-row"><div></div>
         <div class="arc-box" title="${tooltipFor(arcs['Forward'])}">
           ${renderWeapons(arcs['Forward'])}
-        </div>
-        <div></div>
+        </div><div></div>
       </div>
       <div class="arc-row">
         <div class="arc-box" title="${tooltipFor(arcs['Port'])}">
@@ -110,28 +104,22 @@ function renderShip() {
           ${renderWeapons(arcs['Starboard'])}
         </div>
       </div>
-      <div class="arc-row">
-        <div></div>
+      <div class="arc-row"><div></div>
         <div class="arc-box" title="${tooltipFor(arcs['Aft'])}">
           ${renderWeapons(arcs['Aft'])}
-        </div>
-        <div></div>
+        </div><div></div>
       </div>
-      <div class="arc-row">
-        <div></div>
+      <div class="arc-row"><div></div>
         <div class="arc-box" title="${tooltipFor(arcs['Boresight Aft'])}">
           ${renderWeapons(arcs['Boresight Aft'])}
-        </div>
-        <div></div>
+        </div><div></div>
       </div>
     </div>
   `;
   document.getElementById('arcLayoutSection').innerHTML = arcGrid;
 
   function renderWeapons(weapons) {
-    return weapons.map(w =>
-      `<strong>${w["Weapon name"]}</strong>: ${w.AD}/${w.Range}"`
-    ).join('<br>');
+    return weapons.map(w => `<strong>${w["Weapon name"]}</strong>: ${w.AD}/${w.Range}"`).join('<br>');
   }
 
   function tooltipFor(weapons) {
@@ -160,7 +148,6 @@ function executeAction() {
   const selected = document.getElementById('actionSelect').value;
   const action = data.special_actions.find(a => a["Special Action name"] === selected);
   if (action) {
-    alert(`${action["Special Action name"]}:
-${action["Special Action effect"] || "No description available."}`);
+    alert(`${action["Special Action name"]}:\n${action["Special Action effect"] || "No description available."}`);
   }
 }
