@@ -1,13 +1,8 @@
 let data = null;
 
-fetch("https://saladiin.github.io/tracker_db/acta_tracker_data.json")
-  .then(res => {
-    console.log("Fetch status:", res.status, res.ok);
-    return res.json();
-  })
+fetch("acta_tracker_data.json")
+  .then(res => res.json())
   .then(json => {
-    console.log("Loaded JSON:", json);
-    // Ensure all expected properties exist
     data = {
       ships: json.ships || [],
       ship_weapons: json.ship_weapons || [],
@@ -17,15 +12,10 @@ fetch("https://saladiin.github.io/tracker_db/acta_tracker_data.json")
     };
     initializeUI();
   })
-  .catch(err => {
-    console.error("Fetch/parsing error:", err);
-  });
+  .catch(err => console.error("Fetch/parsing error:", err));
 
 function initializeUI() {
-  if (!data || !data.ships) {
-    console.error("initializeUI: data or data.ships missing", data);
-    return;
-  }
+  if (!data || !data.ships) return;
 
   const selector = document.getElementById('shipSelect');
   data.ships.forEach(ship => {
@@ -43,8 +33,6 @@ function initializeUI() {
       opt.textContent = action["Special Action name"];
       actionSel.appendChild(opt);
     });
-  } else {
-    console.warn("No special_actions array:", data.special_actions);
   }
 
   renderShip();
@@ -53,22 +41,17 @@ function initializeUI() {
 function renderShip() {
   const selectedName = document.getElementById('shipSelect').value;
   const ship = data.ships.find(s => s["Ship Class"] === selectedName);
-  if (!ship) {
-    console.error("renderShip: ship not found:", selectedName);
-    return;
-  }
+  if (!ship) return;
 
   const statsSection = document.getElementById('statsSection');
   statsSection.innerHTML = `
     <h2>${selectedName}</h2>
-    <p>
-      Damage:
+    <p>Damage:
       <button onclick="adjustValue('damage', -1)">-</button>
       <span id="damageValue">${ship.Damage}</span> / ${ship.Damage}
       <button onclick="adjustValue('damage', 1)">+</button>
     </p>
-    <p>
-      Crew:
+    <p>Crew:
       <button onclick="adjustValue('crew', -1)">-</button>
       <span id="crewValue">${ship.Crew}</span> / ${ship.Crew}
       <button onclick="adjustValue('crew', 1)">+</button>
@@ -107,32 +90,37 @@ function renderShip() {
       <div class="arc-row">
         <div></div>
         <div class="arc-box" title="${tooltipFor(arcs['Boresight'])}">
-          ${adRange(arcs['Boresight'])}
+          ${renderWeapons(arcs['Boresight'])}
+        </div>
+        <div></div>
+      </div>
+      <div class="arc-row">
+        <div></div>
+        <div class="arc-box" title="${tooltipFor(arcs['Forward'])}">
+          ${renderWeapons(arcs['Forward'])}
         </div>
         <div></div>
       </div>
       <div class="arc-row">
         <div class="arc-box" title="${tooltipFor(arcs['Port'])}">
-          ${adRange(arcs['Port'])}
+          ${renderWeapons(arcs['Port'])}
         </div>
-        <div class="arc-box" title="${tooltipFor(arcs['Forward'])}">
-          ${adRange(arcs['Forward'])}
-        </div>
+        <div></div>
         <div class="arc-box" title="${tooltipFor(arcs['Starboard'])}">
-          ${adRange(arcs['Starboard'])}
+          ${renderWeapons(arcs['Starboard'])}
         </div>
       </div>
       <div class="arc-row">
         <div></div>
         <div class="arc-box" title="${tooltipFor(arcs['Aft'])}">
-          ${adRange(arcs['Aft'])}
+          ${renderWeapons(arcs['Aft'])}
         </div>
         <div></div>
       </div>
       <div class="arc-row">
         <div></div>
         <div class="arc-box" title="${tooltipFor(arcs['Boresight Aft'])}">
-          ${adRange(arcs['Boresight Aft'])}
+          ${renderWeapons(arcs['Boresight Aft'])}
         </div>
         <div></div>
       </div>
@@ -140,13 +128,13 @@ function renderShip() {
   `;
   document.getElementById('arcLayoutSection').innerHTML = arcGrid;
 
-  function adRange(weapons) {
-    if (!weapons || weapons.length === 0) return '';
-    return weapons.map(w => `${w['Weapon name']}: ${w.AD}/${w.Range}\"`).join('<br>');
+  function renderWeapons(weapons) {
+    return weapons.map(w =>
+      `<strong>${w["Weapon name"]}</strong>: ${w.AD}/${w.Range}"`
+    ).join('<br>');
   }
 
   function tooltipFor(weapons) {
-    if (!weapons || weapons.length === 0) return '';
     return weapons.map(w => {
       const traits = (w["Weapon Traits"] || "").split(',').map(t => t.trim()).filter(Boolean);
       const traitDescriptions = traits.map(t => {
@@ -161,11 +149,9 @@ function renderShip() {
 function adjustValue(stat, delta) {
   const span = document.getElementById(`${stat}Value`);
   let val = parseInt(span.textContent, 10);
-
   const selectedName = document.getElementById('shipSelect').value;
   const ship = data.ships.find(s => s["Ship Class"] === selectedName);
   const max = stat === 'damage' ? ship.Damage : ship.Crew;
-
   val = Math.max(0, Math.min(val + delta, max));
   span.textContent = val;
 }
@@ -174,6 +160,7 @@ function executeAction() {
   const selected = document.getElementById('actionSelect').value;
   const action = data.special_actions.find(a => a["Special Action name"] === selected);
   if (action) {
-    alert(`${action["Special Action name"]}:\n${action["Special Action effect"] || "No description available."}`);
+    alert(`${action["Special Action name"]}:
+${action["Special Action effect"] || "No description available."}`);
   }
 }
