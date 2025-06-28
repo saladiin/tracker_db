@@ -6,7 +6,7 @@
       "Speed": 8,
       "Hull": 5,
       "Turns": 2,
-      "Turn Angle": "45°",
+      "Turn Angle": "45\u00b0",
       "Craft (qty)": "Aurora Starfury (1)",
       "Craft (qty).1": null,
       "Ship traits": "Anti-Fighter 2",
@@ -26,7 +26,7 @@
       "Hull": 5,
       "Speed": 8,
       "Turns": 1,
-      "Turn Angle": "45°",
+      "Turn Angle": "45\u00b0",
       "Craft (qty)": "Nial (4)",
       "Craft (qty).1": "Flyer (1)",
       "Ship traits": "Advanced Anti-Fighter 5",
@@ -97,6 +97,54 @@
       "AD": "2",
       "Range": "18",
       "Weapon Traits": "Beam, Double Damage"
+    },
+    {
+      "Ship": "Sharlin War Cruiser",
+      "Weapon name": "Neutron Laser",
+      "Arc": "Forward",
+      "AD": "8",
+      "Range": "30",
+      "Weapon Traits": "Beam, Double Damage, Precise"
+    },
+    {
+      "Ship": "Sharlin War Cruiser",
+      "Weapon name": "Fusion Cannon",
+      "Arc": "Forward",
+      "AD": "8",
+      "Range": "18",
+      "Weapon Traits": "mini beam"
+    },
+    {
+      "Ship": "Sharlin War Cruiser",
+      "Weapon name": "Fusion Cannon",
+      "Arc": "Port",
+      "AD": "8",
+      "Range": "18",
+      "Weapon Traits": "mini beam"
+    },
+    {
+      "Ship": "Sharlin War Cruiser",
+      "Weapon name": "Fusion Cannon",
+      "Arc": "Starboard",
+      "AD": "8",
+      "Range": "18",
+      "Weapon Traits": "mini beam"
+    },
+    {
+      "Ship": "Sharlin War Cruiser",
+      "Weapon name": "Neutron Laser",
+      "Arc": "Aft",
+      "AD": "6",
+      "Range": "30",
+      "Weapon Traits": "Beam, Double Damage, Precise"
+    },
+    {
+      "Ship": "Sharlin War Cruiser",
+      "Weapon name": "Fusion Cannon",
+      "Arc": "Aft",
+      "AD": "8",
+      "Range": "18",
+      "Weapon Traits": "mini beam"
     }
   ],
   "ship_traits": [
@@ -144,7 +192,7 @@
     },
     {
       "Weapon Trait Name": "Armor Piercing",
-      "Effect": "Ignores half of the target’s armor."
+      "Effect": "Ignores half of the target\u2019s armor."
     },
     {
       "Weapon Trait Name": "Twin-Linked",
