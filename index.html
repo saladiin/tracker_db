@@ -7,28 +7,19 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>ACTA Ship Tracker</h1>
+  <h1>Babylon 5: ACTA Tracker</h1>
 
-    <div class="section">
-      <label for="shipSelect">Choose a Ship:</label>
-      <select id="shipSelect" onchange="renderShip()"></select>
-    </div>
+  <label for="shipSelect">Choose Ship:</label>
+  <select id="shipSelect" onchange="renderShip()"></select>
 
-    <div class="stats-wrapper section">
-      <div id="statsSection"></div>
-      <div id="arcLayoutSection"></div>
-    </div>
+  <section id="statsSection"></section>
+  <section id="arcLayoutSection"></section>
+  <section id="traitsSection"></section>
+  <section id="weaponsSection"></section>
 
-    <div class="section" id="traitsSection"></div>
-    <div class="section" id="weaponsSection"></div>
-
-    <div class="section">
-      <label for="actionSelect">Choose Action:</label>
-      <select id="actionSelect"></select>
-      <button onclick="executeAction()">Execute</button>
-    </div>
-  </div>
+  <label for="actionSelect">Choose Action:</label>
+  <select id="actionSelect"></select>
+  <button onclick="executeAction()">Execute Action</button>
 
   <script src="script.js"></script>
 </body>
