@@ -79,9 +79,6 @@ function renderShip() {
     return `<div class="trait" title="${detail ? detail["ship trait effect"] : ""}">${t}</div>`;
   }).join('');
 
-  const weaponsSection = document.getElementById('arcLayoutSection').innerHTML = arcGrid;
-
-
   const arcs = {
     "Boresight": [],
     "Forward": [],
@@ -98,7 +95,7 @@ function renderShip() {
     }
   });
 
-  let arcGrid = `
+  const arcGrid = `
     <div class="arc-grid">
       <div class="arc-row">
         <div></div>
@@ -134,7 +131,7 @@ function renderShip() {
       </div>
     </div>
   `;
-  weaponsSection.innerHTML += arcGrid;
+  document.getElementById('arcLayoutSection').innerHTML = arcGrid;
 
   function adRange(weapons) {
     if (!weapons || weapons.length === 0) return '';
