@@ -36,15 +36,15 @@ function renderShip() {
     <h2>${selectedName}</h2>
     <p>
       Damage:
-      <button onclick="adjustValue('damage', -1)">-</button>
+      <button onclick="adjustValue(&quot;damage&quot;, -1)">-</button>
       <span id="damageValue">${ship.Damage}</span> / ${ship.Damage}
-      <button onclick="adjustValue('damage', 1)">+</button>
+      <button onclick="adjustValue(&quot;damage&quot;, 1)">+</button>
     </p>
     <p>
       Crew:
-      <button onclick="adjustValue('crew', -1)">-</button>
+      <button onclick="adjustValue(&quot;crew&quot;, -1)">-</button>
       <span id="crewValue">${ship.Crew}</span> / ${ship.Crew}
-      <button onclick="adjustValue('crew', 1)">+</button>
+      <button onclick="adjustValue(&quot;crew&quot;, 1)">+</button>
     </p>
     <p>Speed: ${ship.Speed} | Hull: ${ship.Hull}</p>
     <p>Craft: ${ship["Craft (qty)"]}</p>
