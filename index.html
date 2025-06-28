@@ -5,6 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ACTA Ship Tracker</title>
   <link rel="stylesheet" href="https://saladiin.github.io/tracker_db/style.css" />
+  <style>
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .section {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 15px;
+      width: 100%;
+      gap: 10px;
+    }
+
+    .stats-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      gap: 20px;
+    }
+
+    #statsSection, #arcLayoutSection {
+      flex: 1;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
@@ -15,12 +47,14 @@
       <select id="shipSelect" onchange="renderShip()"></select>
     </div>
 
-    <div class="section" id="statsSection"></div>
+    <!-- 📌 Side-by-side layout for stats and arc layout -->
+    <div class="stats-wrapper section">
+      <div id="statsSection"></div>
+      <div id="arcLayoutSection"></div>
+    </div>
+
     <div class="section" id="traitsSection"></div>
     <div class="section" id="weaponsSection"></div>
-
-    <!-- ✅ New Section: Arc Layout Grid -->
-    <div class="section" id="arcLayoutSection"></div>
 
     <div class="section">
       <label for="actionSelect">Choose Action:</label>
