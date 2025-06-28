@@ -1,20 +1,6 @@
 let data = null;
 
 fetch("https://saladiin.github.io/tracker_db/acta_tracker_data.json")
-  .then(function(res) {
-    console.log("Fetch status: " + res.status + ", success: " + res.ok);
-    return res.json();
-  })
-  .then(function(json) {
-    console.log("Loaded JSON:", json);
-    data = json;
-    initializeUI();
-  })
-  .catch(function(err) {
-    console.error("Fetch/parsing error:", err);
-  });let data = null;
-
-fetch("https://saladiin.github.io/tracker_db/acta_tracker_data.json")
   .then(res => {
     console.log("Fetch status:", res.status, res.ok);
     return res.json();
@@ -43,15 +29,15 @@ function initializeUI() {
   });
 
   const actionSel = document.getElementById('actionSelect');
-  if (!Array.isArray(data.special_actions)) {
-    console.warn("No special_actions array:", data.special_actions);
-  } else {
+  if (Array.isArray(data.special_actions)) {
     data.special_actions.forEach(action => {
       const opt = document.createElement('option');
       opt.value = action["Special Action name"];
       opt.textContent = action["Special Action name"];
       actionSel.appendChild(opt);
     });
+  } else {
+    console.warn("No special_actions array:", data.special_actions);
   }
 
   renderShip();
@@ -122,7 +108,7 @@ function renderShip() {
 
 function adjustValue(stat, delta) {
   const span = document.getElementById(`${stat}Value`);
-  let val = parseInt(span.textContent);
+  let val = parseInt(span.textContent, 10);
 
   const selectedName = document.getElementById('shipSelect').value;
   const ship = data.ships.find(s => s["Ship Class"] === selectedName);
