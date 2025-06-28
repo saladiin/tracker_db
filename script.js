@@ -67,6 +67,7 @@ function renderShip() {
       <button onclick="adjustValue('crew', 1)">+</button>
     </p>
     <p>Speed: ${ship.Speed} | Hull: ${ship.Hull}</p>
+    <p>Turns: ${ship.Turns} / ${ship["Turn Angle"]}</p>
     <p>Craft: ${ship["Craft (qty)"]}</p>
   `;
 
