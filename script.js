@@ -1,6 +1,7 @@
 let data = null;
 
-fetch("https://raw.githubusercontent.com/saladiin/tracker_db/refs/heads/main/acta_tracker_data.json")
+fetch("fetch("https://corsproxy.io/?https://raw.githubusercontent.com/saladiin/tracker_db/refs/heads/main/acta_tracker_data.json")
+")
   .then(res => res.json())
   .then(json => {
     data = json;
