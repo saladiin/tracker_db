@@ -3,6 +3,7 @@
     {
       "Race": "Earth Alliance (Third Age)\u00a0-\u00a0Raid",
       "Ship Class": "Hyperion Cruiser",
+      "Speed": 8,
       "Hull": 5,
       "Turns": 2,
       "Turn Angle": "45\u00b0",
