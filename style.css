@@ -1,64 +1,57 @@
 body {
   font-family: Arial, sans-serif;
-  background: #121212;
-  color: #f0f0f0;
-  margin: 0;
-  padding: 0;
+  margin: 1rem;
+  background-color: #111;
+  color: #eee;
 }
 
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
+h1, h2, h3 {
+  text-align: center;
+  color: #00bfff;
 }
 
-.section {
-  display: flex;
-  flex-wrap: wrap;
+.adjustable {
+  display: inline-flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 15px;
+  gap: 0.5rem;
 }
 
-.stats-wrapper {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 20px;
+button {
+  background-color: #333;
+  color: #eee;
+  border: 1px solid #666;
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #444;
+}
+
+select {
   width: 100%;
-}
-
-#statsSection, #arcLayoutSection {
-  flex: 1 1 400px;
+  max-width: 400px;
+  margin: 0.5rem auto;
+  display: block;
 }
 
 .arc-table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 10px;
+  margin: 1rem 0;
 }
+
 .arc-table th, .arc-table td {
-  border: 1px solid #888;
-  padding: 5px;
+  border: 1px solid #666;
+  padding: 0.3rem;
   text-align: left;
 }
 
-.adjustable {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.adjustable button {
-  background: #333;
-  color: white;
-  border: none;
-  padding: 3px 6px;
-  cursor: pointer;
-}
-
-@media (max-width: 600px) {
-  .stats-wrapper {
-    flex-direction: column;
+@media (min-width: 700px) {
+  #statsSection > div {
+    display: flex;
+    justify-content: space-between;
+    max-width: 600px;
+    margin: auto;
   }
 }
