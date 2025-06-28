@@ -10,6 +10,11 @@ fetch("acta_tracker_data.json")
 
 function initializeUI() {
   const selector = document.getElementById("shipSelect");
+  if (!data?.ships) {
+    console.error("Missing ships data");
+    return;
+  }
+  selector.innerHTML = "";
   data.ships.forEach(ship => {
     const opt = document.createElement("option");
     opt.value = ship["Ship Class"];
@@ -68,9 +73,9 @@ function renderShip() {
   arcSection.innerHTML = "";
   const arcs = ["Boresight", "Forward", "Port", "Starboard", "Aft", "Boresight Aft"];
   arcs.forEach(arc => {
-    const weapons = data.ship_weapons.filter(w =>
+    const weapons = data.ship_weapons?.filter(w =>
       w.Ship === selectedClass && w.Arc.toLowerCase() === arc.toLowerCase()
-    );
+    ) || [];
     if (weapons.length > 0) {
       arcSection.innerHTML += `
         <h3>${arc}</h3>
@@ -94,13 +99,13 @@ function renderShip() {
   const traitsSection = document.getElementById("traitsSection");
   traitsSection.innerHTML = `<h3>Traits</h3><ul>${
     traitNames.map(t => {
-      const found = data.ship_traits.find(st => st["Ship Trait Name"] === t);
+      const found = data.ship_traits?.find(st => st["Ship Trait Name"] === t);
       return `<li><strong>${t}</strong>: ${found ? found["ship trait effect"] : "No description"}</li>`;
     }).join("")
   }</ul>`;
 
   const weaponsSection = document.getElementById("weaponsSection");
-  const allWeapons = data.ship_weapons.filter(w => w.Ship === selectedClass);
+  const allWeapons = data.ship_weapons?.filter(w => w.Ship === selectedClass) || [];
   weaponsSection.innerHTML = `<h3>All Weapons</h3><ul>${
     allWeapons.map(w => `<li><strong>${w["Weapon name"]}</strong> (${w.Arc}) – AD: ${w.AD}, Range: ${w.Range}, Traits: ${w["Weapon Traits"]}</li>`).join("")
   }</ul>`;
