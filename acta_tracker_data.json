@@ -7,13 +7,13 @@
       "Turns": 2,
       "Turn Angle": "45\u00b0",
       "Craft (qty)": "Aurora Starfury\u00a0(1)",
-      "Craft (qty).1": NaN,
+      "Craft (qty).1": null,
       "Ship traits": "Anti-Fighter 2",
       "Ship traits.1": "Interceptors 2",
       "Ship traits.2": "Jump Engine",
-      "Ship traits.3": NaN,
-      "Ship traits.4": NaN,
-      "Ship traits.5": NaN,
+      "Ship traits.3": null,
+      "Ship traits.4": null,
+      "Ship traits.5": null,
       "Damage": 28,
       "Damage threshold": 6,
       "Crew": 32,
@@ -32,7 +32,7 @@
       "Ship traits.2": "Flight Computer",
       "Ship traits.3": "Lumbering",
       "Ship traits.4": "Stealth +5",
-      "Ship traits.5": NaN,
+      "Ship traits.5": null,
       "Damage": 60,
       "Damage threshold": 20,
       "Crew": 66,
@@ -43,7 +43,7 @@
   "ship_traits": {
     "Adaptive Armour": "Halve Damage and Crew, round down.",
     "Advanced Anti-Fighter X": "As anti-fighter but +1 to roll",
-    "Advanced Jump Engine": NaN,
+    "Advanced Jump Engine": null,
     "Afterburner": "All Power to Engines! doubles Speed",
     "Agile": "Need only move \u00bc of speed beforeturning, 1\u201d between turns",
     "Anti-Fighter X": "Has X dice to roll against fighters hulls to destroy them, 2\u201d range",
@@ -54,8 +54,8 @@
     "Fleet Carrier": "Plus 1 bonus to dogfight. Repair destroyed flights within 30\u201d. See rules.",
     "Flight Computer": "Crew Quality never less than 4, no penalties for being reduced to Skeleton Crew",
     "Gravitiv Energy Grid  X": "Reduces damage and crew taken by X. critical hits not affected",
-    "Interceptors X": NaN,
-    "Jump Engine": NaN,
+    "Interceptors X": null,
+    "Jump Engine": null,
     "Lumbering": "May not continue move after turning, one turn only; may not be lost",
     "Self Repairing X": "Plus 1 to Damage Control. In the end phase, 1d6 rolled,  listed Damage repaired",
     "Scout": "36\u201d range. Instead of special action my roll CQ 8+ to reduce stealth by 1 or to allow friendly ships to re-roll one weapon AD against target that turn (not beams).",
@@ -96,7 +96,7 @@
     },
     {
       "Special Action name": "gravity well",
-      "Special Action effect": NaN
+      "Special Action effect": null
     },
     {
       "Special Action name": "All Stop",
@@ -147,83 +147,83 @@
       "Special Action effect": "(opposed) Both players make an opposed Crew Quality check. If you beat your opponent, his crew will surrender. His ship stays motionless on the table. If it is attacked, control passes to your opponent. If your ships are more than 10\u201d away in the initiative phase of any turn, you opponent may regain control on a Crew"
     },
     {
-      "Special Action name": NaN,
-      "Special Action effect": NaN
+      "Special Action name": null,
+      "Special Action effect": null
     },
     {
-      "Special Action name": NaN,
-      "Special Action effect": NaN
+      "Special Action name": null,
+      "Special Action effect": null
     },
     {
-      "Special Action name": NaN,
-      "Special Action effect": NaN
+      "Special Action name": null,
+      "Special Action effect": null
     },
     {
-      "Special Action name": NaN,
-      "Special Action effect": NaN
+      "Special Action name": null,
+      "Special Action effect": null
     },
     {
-      "Special Action name": NaN,
-      "Special Action effect": NaN
+      "Special Action name": null,
+      "Special Action effect": null
     },
     {
-      "Special Action name": NaN,
-      "Special Action effect": NaN
+      "Special Action name": null,
+      "Special Action effect": null
     },
     {
-      "Special Action name": NaN,
-      "Special Action effect": NaN
+      "Special Action name": null,
+      "Special Action effect": null
     },
     {
-      "Special Action name": NaN,
-      "Special Action effect": NaN
+      "Special Action name": null,
+      "Special Action effect": null
     },
     {
-      "Special Action name": NaN,
-      "Special Action effect": NaN
+      "Special Action name": null,
+      "Special Action effect": null
     },
     {
-      "Special Action name": NaN,
-      "Special Action effect": NaN
+      "Special Action name": null,
+      "Special Action effect": null
     },
     {
-      "Special Action name": NaN,
-      "Special Action effect": NaN
+      "Special Action name": null,
+      "Special Action effect": null
     },
     {
-      "Special Action name": NaN,
-      "Special Action effect": NaN
+      "Special Action name": null,
+      "Special Action effect": null
     },
     {
-      "Special Action name": NaN,
-      "Special Action effect": NaN
+      "Special Action name": null,
+      "Special Action effect": null
     },
     {
-      "Special Action name": NaN,
-      "Special Action effect": NaN
+      "Special Action name": null,
+      "Special Action effect": null
     },
     {
-      "Special Action name": NaN,
-      "Special Action effect": NaN
+      "Special Action name": null,
+      "Special Action effect": null
     },
     {
-      "Special Action name": NaN,
-      "Special Action effect": NaN
+      "Special Action name": null,
+      "Special Action effect": null
     },
     {
-      "Special Action name": NaN,
-      "Special Action effect": NaN
+      "Special Action name": null,
+      "Special Action effect": null
     },
     {
-      "Special Action name": NaN,
-      "Special Action effect": NaN
+      "Special Action name": null,
+      "Special Action effect": null
     },
     {
-      "Special Action name": NaN,
-      "Special Action effect": NaN
+      "Special Action name": null,
+      "Special Action effect": null
     },
     {
-      "Special Action name": NaN,
+      "Special Action name": null,
       "Special Action effect": "Quality check of 10+."
     }
   ]
