@@ -1,68 +1,155 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ACTA Ship Tracker</title>
-  <link rel="stylesheet" href="https://saladiin.github.io/tracker_db/style.css" />
-  <style>
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+{
+  "ships": [
+    {
+      "Race": "Earth Alliance (Third Age) - Raid",
+      "Ship Class": "Hyperion Cruiser",
+      "Speed": 8,
+      "Hull": 5,
+      "Turns": 2,
+      "Turn Angle": "45°",
+      "Craft (qty)": "Aurora Starfury (1)",
+      "Craft (qty).1": null,
+      "Ship traits": "Anti-Fighter 2",
+      "Ship traits.1": "Interceptors 2",
+      "Ship traits.2": "Jump Engine",
+      "Ship traits.3": null,
+      "Ship traits.4": null,
+      "Ship traits.5": null,
+      "Damage": 28,
+      "Damage threshold": 6,
+      "Crew": 32,
+      "Crew threshold": 6
+    },
+    {
+      "Race": "Minbari Federation",
+      "Ship Class": "Sharlin War Cruiser",
+      "Hull": 5,
+      "Speed": 8,
+      "Turns": 1,
+      "Turn Angle": "45°",
+      "Craft (qty)": "Nial (4)",
+      "Craft (qty).1": "Flyer (1)",
+      "Ship traits": "Advanced Anti-Fighter 5",
+      "Ship traits.1": "Advanced Jump Engine",
+      "Ship traits.2": "Flight Computer",
+      "Ship traits.3": "Lumbering",
+      "Ship traits.4": "Stealth +5",
+      "Ship traits.5": null,
+      "Damage": 60,
+      "Damage threshold": 20,
+      "Crew": 66,
+      "Crew threshold": 22
     }
-
-    .section {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: flex-start;
-      margin-bottom: 15px;
-      width: 100%;
-      gap: 10px;
+  ],
+  "ship_weapons": [
+    {
+      "Ship": "Hyperion Cruiser",
+      "Weapon name": "Heavy Laser Cannon",
+      "Arc": "Boresight",
+      "AD": "4",
+      "Range": "18",
+      "Weapon Traits": "Beam, Double Damage"
+    },
+    {
+      "Ship": "Hyperion Cruiser",
+      "Weapon name": "Medium Pulse Cannon",
+      "Arc": "Forward",
+      "AD": "4",
+      "Range": "10",
+      "Weapon Traits": ""
+    },
+    {
+      "Ship": "Hyperion Cruiser",
+      "Weapon name": "Plasma Cannon",
+      "Arc": "Forward",
+      "AD": "4",
+      "Range": "8",
+      "Weapon Traits": "Armor Piercing, Twin-Linked"
+    },
+    {
+      "Ship": "Hyperion Cruiser",
+      "Weapon name": "Medium Pulse Cannon",
+      "Arc": "Port",
+      "AD": "8",
+      "Range": "10",
+      "Weapon Traits": ""
+    },
+    {
+      "Ship": "Hyperion Cruiser",
+      "Weapon name": "Medium Pulse Cannon",
+      "Arc": "Starboard",
+      "AD": "8",
+      "Range": "10",
+      "Weapon Traits": ""
+    },
+    {
+      "Ship": "Hyperion Cruiser",
+      "Weapon name": "Medium Pulse Cannon",
+      "Arc": "Aft",
+      "AD": "8",
+      "Range": "10",
+      "Weapon Traits": ""
+    },
+    {
+      "Ship": "Hyperion Cruiser",
+      "Weapon name": "Heavy Laser Cannon (a)",
+      "Arc": "Boresight Aft",
+      "AD": "2",
+      "Range": "18",
+      "Weapon Traits": "Beam, Double Damage"
     }
-
-    .stats-wrapper {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      width: 100%;
-      gap: 20px;
+  ],
+  "ship_traits": [
+    {
+      "Ship Trait Name": "Anti-Fighter 2",
+      "ship trait effect": "Rolls 2 extra dice against fighters."
+    },
+    {
+      "Ship Trait Name": "Interceptors 2",
+      "ship trait effect": "Rolls 2 dice to cancel incoming hits."
+    },
+    {
+      "Ship Trait Name": "Jump Engine",
+      "ship trait effect": "Allows jump point opening."
+    },
+    {
+      "Ship Trait Name": "Advanced Anti-Fighter 5",
+      "ship trait effect": "Improved defense against fighter attacks."
+    },
+    {
+      "Ship Trait Name": "Advanced Jump Engine",
+      "ship trait effect": "Faster and more reliable jump capability."
+    },
+    {
+      "Ship Trait Name": "Flight Computer",
+      "ship trait effect": "Improves maneuverability and initiative."
+    },
+    {
+      "Ship Trait Name": "Lumbering",
+      "ship trait effect": "Can only turn once per move."
+    },
+    {
+      "Ship Trait Name": "Stealth +5",
+      "ship trait effect": "Enemy must subtract 5 from scan attempts."
     }
-
-    #statsSection, #arcLayoutSection {
-      flex: 1;
+  ],
+  "weapon_traits": [
+    {
+      "Weapon Trait Name": "Beam",
+      "Effect": "Ignores Interceptors; deals damage each turn if undodged."
+    },
+    {
+      "Weapon Trait Name": "Double Damage",
+      "Effect": "Deals double the damage on a successful hit."
+    },
+    {
+      "Weapon Trait Name": "Armor Piercing",
+      "Effect": "Ignores half of the target’s armor."
+    },
+    {
+      "Weapon Trait Name": "Twin-Linked",
+      "Effect": "Roll twice for each attack die and use best result."
     }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>ACTA Ship Tracker</h1>
-
-    <div class="section">
-      <label for="shipSelect">Choose a Ship:</label>
-      <select id="shipSelect" onchange="renderShip()"></select>
-    </div>
-
-    <!-- 📌 Side-by-side layout for stats and arc layout -->
-    <div class="stats-wrapper section">
-      <div id="statsSection"></div>
-      <div id="arcLayoutSection"></div>
-    </div>
-
-    <div class="section" id="traitsSection"></div>
-    <div class="section" id="weaponsSection"></div>
-
-    <div class="section">
-      <label for="actionSelect">Choose Action:</label>
-      <select id="actionSelect"></select>
-      <button onclick="executeAction()">Execute</button>
-    </div>
-  </div>
-
-  <script src="https://saladiin.github.io/tracker_db/script.js"></script>
-</body>
-</html>
+  ],
+  "special_actions": []
+}
