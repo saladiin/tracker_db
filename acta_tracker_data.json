@@ -18,21 +18,7 @@
       "Damage": 28,
       "Damage threshold": 6,
       "Crew": 32,
-      "Crew threshold": 6,
-      "weapon_layout": {
-        "Boresight": ["4/18\"", "2/18\""],
-        "Forward": ["4/10\"", "4/8\""],
-        "Port": ["8/10\""],
-        "Starboard": ["8/10\""],
-        "Aft": ["2/10\""]
-      },
-      "weapon_tooltips": {
-        "Boresight": [["Beam", "Double Damage"], ["Beam", "Double Damage"]],
-        "Forward": [[""], ["Armor Piercing", "Twin-Linked"]],
-        "Port": [[""]],
-        "Starboard": [[""]],
-        "Aft": [[""]]
-      }
+      "Crew threshold": 6
     },
     {
       "Race": "Minbari Federation",
@@ -66,15 +52,7 @@
     },
     {
       "Ship": "Hyperion Cruiser",
-      "Weapon name": "Heavy Laser Cannon (a)",
-      "Arc": "Boresight",
-      "AD": "2",
-      "Range": "18",
-      "Weapon Traits": "Beam, Double Damage"
-    },
-    {
-      "Ship": "Hyperion Cruiser",
-      "Weapon name": "Plasma Cannon",
+      "Weapon name": "Medium Pulse Cannon",
       "Arc": "Forward",
       "AD": "4",
       "Range": "10",
@@ -90,7 +68,7 @@
     },
     {
       "Ship": "Hyperion Cruiser",
-      "Weapon name": "Plasma Cannon",
+      "Weapon name": "Medium Pulse Cannon",
       "Arc": "Port",
       "AD": "8",
       "Range": "10",
@@ -98,7 +76,7 @@
     },
     {
       "Ship": "Hyperion Cruiser",
-      "Weapon name": "Plasma Cannon",
+      "Weapon name": "Medium Pulse Cannon",
       "Arc": "Starboard",
       "AD": "8",
       "Range": "10",
@@ -106,11 +84,19 @@
     },
     {
       "Ship": "Hyperion Cruiser",
-      "Weapon name": "Plasma Cannon",
+      "Weapon name": "Medium Pulse Cannon",
       "Arc": "Aft",
-      "AD": "2",
+      "AD": "8",
       "Range": "10",
       "Weapon Traits": ""
+    },
+    {
+      "Ship": "Hyperion Cruiser",
+      "Weapon name": "Heavy Laser Cannon (a)",
+      "Arc": "Boresight Aft",
+      "AD": "2",
+      "Range": "18",
+      "Weapon Traits": "Beam, Double Damage"
     }
   ],
   "ship_traits": [
