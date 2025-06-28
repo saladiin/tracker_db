@@ -79,32 +79,79 @@ function renderShip() {
     return `<div class="trait" title="${detail ? detail["ship trait effect"] : ""}">${t}</div>`;
   }).join('');
 
-  const weapons = data.ship_weapons.filter(w => w.Ship === selectedName);
-  const grouped = {};
-  for (const w of weapons) {
-    if (!grouped[w.Arc]) grouped[w.Arc] = [];
-    grouped[w.Arc].push(w);
-  }
-
   const weaponsSection = document.getElementById('weaponsSection');
   weaponsSection.innerHTML = '<h3>Weapons</h3>';
-  ["Boresight", "Forward", "Port", "Starboard", "Aft", "Boresight Aft"].forEach(arc => {
-    if (!grouped[arc]) return;
-    weaponsSection.innerHTML += `<div class="arc-title">${arc}:</div>`;
-    grouped[arc].forEach(w => {
-      const traits = (w["Weapon Traits"] || "").split(",").map(t => t.trim()).filter(Boolean);
-      const tooltip = traits.map(t => {
-        const found = data.weapon_traits.find(wt => wt["Weapon Trait Name"] === t);
-        return `<span title="${found ? found.Effect : ""}">${t}</span>`;
-      }).join(", ");
-      weaponsSection.innerHTML += `
-        <div class="weapon-block">
-          <strong>${w["Weapon name"]}</strong> (Range ${w.Range}, AD ${w.AD})<br/>
-          Traits: ${tooltip}
-        </div>
-      `;
-    });
+
+  const arcs = {
+    "Boresight": [],
+    "Forward": [],
+    "Port": [],
+    "Starboard": [],
+    "Aft": [],
+    "Boresight Aft": []
+  };
+
+  const weapons = data.ship_weapons.filter(w => w.Ship === selectedName);
+  weapons.forEach(w => {
+    if (arcs[w.Arc]) {
+      arcs[w.Arc].push(w);
+    }
   });
+
+  let arcGrid = `
+    <div class="arc-grid">
+      <div class="arc-row">
+        <div></div>
+        <div class="arc-box" title="${tooltipFor(arcs['Boresight'])}">
+          ${adRange(arcs['Boresight'])}
+        </div>
+        <div></div>
+      </div>
+      <div class="arc-row">
+        <div class="arc-box" title="${tooltipFor(arcs['Port'])}">
+          ${adRange(arcs['Port'])}
+        </div>
+        <div class="arc-box" title="${tooltipFor(arcs['Forward'])}">
+          ${adRange(arcs['Forward'])}
+        </div>
+        <div class="arc-box" title="${tooltipFor(arcs['Starboard'])}">
+          ${adRange(arcs['Starboard'])}
+        </div>
+      </div>
+      <div class="arc-row">
+        <div></div>
+        <div class="arc-box" title="${tooltipFor(arcs['Aft'])}">
+          ${adRange(arcs['Aft'])}
+        </div>
+        <div></div>
+      </div>
+      <div class="arc-row">
+        <div></div>
+        <div class="arc-box" title="${tooltipFor(arcs['Boresight Aft'])}">
+          ${adRange(arcs['Boresight Aft'])}
+        </div>
+        <div></div>
+      </div>
+    </div>
+  `;
+  weaponsSection.innerHTML += arcGrid;
+
+  function adRange(weapons) {
+    if (!weapons || weapons.length === 0) return '';
+    return weapons.map(w => `${w.AD}/${w.Range}"`).join('<br>');
+  }
+
+  function tooltipFor(weapons) {
+    if (!weapons || weapons.length === 0) return '';
+    return weapons.map(w => {
+      const traits = (w["Weapon Traits"] || "").split(',').map(t => t.trim()).filter(Boolean);
+      const traitDescriptions = traits.map(t => {
+        const match = data.weapon_traits.find(wt => wt["Weapon Trait Name"] === t);
+        return match ? `${t}: ${match.Effect}` : t;
+      }).join('; ');
+      return `${w["Weapon name"]} — ${traitDescriptions}`;
+    }).join(' | ');
+  }
 }
 
 function adjustValue(stat, delta) {
