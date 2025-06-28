@@ -79,8 +79,7 @@ function renderShip() {
     return `<div class="trait" title="${detail ? detail["ship trait effect"] : ""}">${t}</div>`;
   }).join('');
 
-  const weaponsSection = document.getElementById('weaponsSection');
- document.getElementById('arcLayoutSection').innerHTML = arcGrid;
+  const weaponsSection = document.getElementById('arcLayoutSection').innerHTML = arcGrid;
 
 
   const arcs = {
