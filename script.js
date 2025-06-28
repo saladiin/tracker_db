@@ -142,7 +142,7 @@ function renderShip() {
 
   function adRange(weapons) {
     if (!weapons || weapons.length === 0) return '';
-    return weapons.map(w => `${w.AD}/${w.Range}"`).join('<br>');
+    return weapons.map(w => `${w['Weapon name']}: ${w.AD}/${w.Range}\"`).join('<br>');
   }
 
   function tooltipFor(weapons) {
